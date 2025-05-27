@@ -1,27 +1,12 @@
-def sorted_by_frequency(sentence,letter)
-  words = sentence.split(" ")  
-   
-   result = []
-   max_count = 0
-
-   words.each do |word|
-      count = word.count(letter)  
-
-      if count>max_count
-         max_count = count
-       result = [words]   
-      elsif count==max_count && count>0
-
-      result<<word
-      end       
+def lar(a)
+  max_element =a[0] 
+   a.each do |element|
+    if element<max_element
+      max_element= element
+    end
    end
-    result
-
+  max_element
 end
-a = "Deepak Deep Dipeeeesh Dipali"
-b = "e"
 
-# Deepak Deep Dipesh Dipali
-
-puts "Output:"
-puts sorted_by_frequency(a, b)
+n = [8,7,11,6,5,4]
+puts lar(n)
